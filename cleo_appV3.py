@@ -26,7 +26,7 @@ if uploaded_file:
     )
 
     result = client.run_workflow(
-        workspace_name="cleo-customer-liaison-ecommerce-operator",
+        workspace_name="cleo-know-your-skin",
         workflow_id="custom-workflow-4",
         images={"image": tmp_file_path},
         use_cache=True
