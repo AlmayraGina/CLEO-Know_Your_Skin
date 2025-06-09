@@ -7,14 +7,14 @@ import tempfile
 
 st.title("CLEO - Know Your Skin")
 
-uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader("Upload foto wajah dengan pencahayaan cukup dan tanpa riasan", type=["jpg", "jpeg", "png"])
 
 if uploaded_file:
     
     image_bytes = uploaded_file.read()
 
     image = Image.open(io.BytesIO(image_bytes))
-    st.image(image, caption="Uploaded Image", use_container_width=True)
+    st.image(image, caption="Gambar yang diupload", use_container_width=True)
 
     with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as tmp_file:
         tmp_file.write(image_bytes)
